@@ -1,0 +1,22 @@
+{
+    "dbcode.connections": [
+        {
+            "connectionId": "ABYlbiGEYOJM-0g6WtjBT",
+            "name": "Database",
+            "driver": "mysql",
+            "connectionType": "host",
+            "host": "localhost",
+            "port": 3307,
+            "ssl": false,
+            "username": "root",
+            "password": "",
+            "savePassword": "secretStorage",
+            "database": "receitas_db",
+            "readOnly": false,
+            "connectionTimeout": 30,
+            "driverOptions": {
+                "retrievePublickey": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  api:
+    build: .
+    command: ./.docker/start.sh
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/api
+    networks:
+      - a4pm
+
+  db:
+    image: mysql:latest
+    environment: 
+      MYSQL_DATABASE: 'teste_receitas_rg_sistemas'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes: 
+        - ./.docker/mysql/dbdata:/var/lib/mysql
+    ports:
+      - 3307:3306
+    networks:
+      - a4pm
+
+networks:
+  a4pm:
+    driver: bridge
